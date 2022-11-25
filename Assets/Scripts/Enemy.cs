@@ -57,8 +57,12 @@ public class Enemy : MonoBehaviour
             }
 
             if (i + 1 == test.positions.Length)
-
+            {
+                GameManager.gm.health--;
                 Destroy(this.gameObject);
+            }
+
+                
 
 
 
