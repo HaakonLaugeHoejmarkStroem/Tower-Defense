@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
             Destroy(this.gameObject);
 
-
-        
     }
+
+
     public void SetRoute(Test newTest)
     {
         test = newTest;

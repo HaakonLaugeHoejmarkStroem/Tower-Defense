@@ -5,9 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
-    public void SetTarget(GameObject target)
+    bool isEnemy;
+    public void SetTarget(GameObject target, bool isMaybeEnemy)
     {
         StartCoroutine(HitTarget(target.transform));
+        isEnemy = isMaybeEnemy;
     }
 
     IEnumerator HitTarget(Transform target)
@@ -30,7 +32,16 @@ public class Bullet : MonoBehaviour
 
         }
         transform.position = target.position;
-        target.GetComponent<Enemy>().TakeDamage(20);
-        Destroy(this.gameObject);
+        if (!isEnemy)
+        {
+            target.GetComponent<Enemy>().TakeDamage(20);
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            target.GetComponent<Turret>().TakeDamage(20);
+            Destroy(this.gameObject);
+        }
+        
     }
 }

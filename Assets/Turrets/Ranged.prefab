@@ -59,9 +59,10 @@ GameObject:
   - component: {fileID: 9187173911115885385}
   - component: {fileID: 9187173911115885386}
   - component: {fileID: 9187173911115885387}
+  - component: {fileID: 8753173977511484990}
   m_Layer: 0
   m_Name: Ranged
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,4 +162,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInSight: []
+  turretsInSight: []
   bullet: {fileID: 5430718617728745385, guid: dcdacd31556bdb1469f72f515640e7a1, type: 3}
+  isEnemy: 0
+--- !u!114 &8753173977511484990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9187173911115885388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0829c9b07c2314dbd6156ea04da263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  currentHealth: 0
